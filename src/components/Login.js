@@ -1,34 +1,13 @@
 import './Login.css';
 import Logo from './search.png';
-import React, { useState, useEffect, useCallback } from "react";
-// import ReactDOM from "react-dom";
+// import React, { useState } from "react";
 
-
-
-function Login() {
-    const [state, setState] = useState("login");
+function Login(props) {
+    console.log(props)
     const onClick = () => {
-        setState("home");
-        window.open("Home.js")
+        props.setState('home');
     };
-    const homePage = useCallback((event) => {
-        console.log("homePage", state, event);
-      }, []);
-    const addLoginListener = () =>
-        window.addEventListener("login", homePage);
-    const removeLoginListener = () =>
-        window.removeEventListener("login", homePage);
-    
-        useEffect(() => {
-            addLoginListener();
-            return () => {
-                removeLoginListener();
-            };
-        }, []);
-        useEffect(() => {
-            console.log("Current state: ", state);
-          }, [state]);
-        
+
     return (
         <div className="Container">
             <img className="bg-container" src={Logo} alt="Logo" />
@@ -44,9 +23,7 @@ function Login() {
                     <img src={Logo} alt="Logo" />
                 </span>
                 Sign in with Google</button>
-          
         </div>
-
     );
 }
 
