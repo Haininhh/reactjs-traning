@@ -1,14 +1,11 @@
-// import logo from './logo.svg';
 import React from "react";
-import App from '../src/components/Login';
-// import './App.css';
+import Login from '../src/components/Login';
 
-const AppHome =()=> {
+
+
+const App =()=> {
   return (
-    <div className="App">
-      <App/>
-    </div>
-  );
-}
-
-export default AppHome;
+     <Login />
+  )
+  };
+export default App;
