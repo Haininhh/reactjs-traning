@@ -1,12 +1,13 @@
 import './Home.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Logo from './search.png';
+import Header from '../Header';
+import Footer from '../Footer';
+import Logo from '../assets/img/search.png';
 import React, { useState } from "react";
 
-function Home(props) {
-    const [state, setState] = useState("home");
-    if(state === "home"){
+const Home = (props) => {
+    const [state,setState] = useState("home");
+    
+    if (state === "home") {
         return (
             <div className="content">
                 <Header setState={setState}/>
@@ -16,10 +17,11 @@ function Home(props) {
                 </div>
                 <Footer />
             </div>
-    
+        
         );
-    }
-    
+    }   
 }
+    
+
 
 export default Home;

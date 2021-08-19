@@ -1,8 +1,8 @@
 import './Login.css';
-import Logo from './search.png';
+import Logo from '../assets/img/search.png';
 // import React, { useState } from "react";
 
-function Login(props) {
+const Login = (props) => {
     const onClick = () => {
         props.setState('home');
     };

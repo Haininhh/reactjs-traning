@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Login from "../src/components/Login";
-import Home from "../src/components/Home";
+import Login from "./Components/Login";
+import Home from "./Components/Home";
 
 const App = () => {
   const [state, setState] = useState("login");
@@ -9,7 +9,7 @@ const App = () => {
     return <Login setState={setState} />;
   } else if (state === "home") {
     
-    return <Home />;
+    return <Home setState={setState} />;
   }
   return <></>;
 };
