@@ -1,30 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.Header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
 }
-.login {
-    width: 800px;
-    margin: 60px auto;
-    position: relative;
-}
-.bg-container {
-    width: 45%;
-    position: absolute;
-    top: -100px;
-    right: 150px;
-    opacity: 0.1;
-}
-h1 {
-    width: 50%;
-    font-size: 60px;
-    color: #0d7fff;
-    font-weight: 500;
-    line-height: 1.1;
-    padding: 0px 0 20px;
-}
-
-.btn-sig-in {
+.btn-log-out {
     display: flex;
     align-items: center;
     width: 300px;
@@ -41,19 +20,17 @@ h1 {
     color: #888;
     cursor: pointer;
 }
-
-.btn-sig-in:hover {
+    
+.btn-log-out:hover {
     background-color: #0d7fff;
     color: #fff;
 }
-
-.img-sig-in {
+.img-log-out{
     padding: 13px 15px 12px;
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 4px;
 }
-
-.img-sig-in img {
+.img-log-out img {
     width: 32px;
 }

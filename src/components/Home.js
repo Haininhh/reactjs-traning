@@ -1,22 +1,25 @@
-import './Login.css';
+import './Home.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Logo from './search.png';
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
 function Home(props) {
-      const logout = () => {
-        props.setState('login');
-    };
-    return (
-        <div className="Container">
-            <img className="bg-container" src={Logo} alt="Logo" />
-            <h1>Sign in with Google</h1>
-            <button className="btn-sig-in"  onClick={logout}>
-                <span className="img-sig-in">
-                    <img src={Logo} alt="Logo" />
-                </span>
-                Sign out with Google</button>
-        </div>
-    );
+    const [state, setState] = useState("home");
+    if(state === "home"){
+        return (
+            <div className="content">
+                <Header setState={setState}/>
+                <div className="Container">
+                    <img className="bg-container" src={Logo} alt="Logo" />
+                    <h1>Sign in with Google</h1>
+                </div>
+                <Footer />
+            </div>
+    
+        );
+    }
+    
 }
 
 export default Home;

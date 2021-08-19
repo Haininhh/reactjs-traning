@@ -1,27 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.login {
+.Container {
     width: 800px;
+    height: 300px;
     margin: 60px auto;
     position: relative;
 }
+
 .bg-container {
     width: 45%;
     position: absolute;
     top: -100px;
     right: 150px;
     opacity: 0.1;
-}
-h1 {
-    width: 50%;
-    font-size: 60px;
-    color: #0d7fff;
-    font-weight: 500;
-    line-height: 1.1;
-    padding: 0px 0 20px;
 }
 
 .btn-sig-in {

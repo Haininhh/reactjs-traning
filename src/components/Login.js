@@ -3,13 +3,11 @@ import Logo from './search.png';
 // import React, { useState } from "react";
 
 function Login(props) {
-    console.log(props)
     const onClick = () => {
         props.setState('home');
     };
-
     return (
-        <div className="Container">
+        <div className="login">
             <img className="bg-container" src={Logo} alt="Logo" />
             <h1>Sign in with Google</h1>
             <button className="btn-sig-in">
