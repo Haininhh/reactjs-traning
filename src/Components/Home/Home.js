@@ -5,12 +5,10 @@ import Logo from '../assets/img/search.png';
 import React, { useState } from "react";
 
 const Home = (props) => {
-    const [state,setState] = useState("home");
-    
-    if (state === "home") {
+    if (props.loginState === "home") {
         return (
             <div className="content">
-                <Header setState={setState}/>
+                <Header setState={props.setState}/>
                 <div className="Container">
                     <img className="bg-container" src={Logo} alt="Logo" />
                     <h1>Sign in with Google</h1>

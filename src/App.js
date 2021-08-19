@@ -9,7 +9,7 @@ const App = () => {
     return <Login setState={setState} />;
   } else if (state === "home") {
     
-    return <Home setState={setState} />;
+    return <Home setState={setState} loginState={state}/>;
   }
   return <></>;
 };
