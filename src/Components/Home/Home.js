@@ -2,7 +2,7 @@ import './Home.css';
 import Logo from '../assets/img/search.png';
 // import React, { useState } from "react";
 
-const Home = (props) => {
+const Home = () => {
     return (
         <div className="content">
             <div className="Container">

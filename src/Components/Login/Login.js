@@ -1,27 +1,36 @@
 import './Login.css';
 import Logo from '../assets/img/search.png';
+import React from "react";
+import {BrowserRouter as Router, Link, Switch} from "react-router-dom";
+
 // import React, { useState } from "react";
 
 const Login = (props) => {
     const onClick = () => {
         props.setState('home');
     };
+    
     return (
-        <div className="login">
-            <img className="bg-container" src={Logo} alt="Logo" />
-            <h1>Sign in with Google</h1>
-            <button className="btn-sig-in">
-                <span className="img-sig-in">
-                    <img src={Logo} alt="Logo" />
-                </span>
-                Sign in with Google</button>
-         
-            <button className="btn-sig-in" onClick={onClick}>
-                <span className="img-sig-in">
-                    <img src={Logo} alt="Logo" />
-                </span>
-                Sign in with Google</button>
-        </div>
+        <Router>
+            <Switch>
+                <div className="login">
+                    <img className="bg-container" src={Logo} alt="Logo" />
+                    <h1>Sign in with Google</h1>
+                    <button className="btn-sig-in">
+                        <span className="img-sig-in">
+                            <img src={Logo} alt="Logo" />
+                        </span>
+                        Sign in with Google</button>
+                        <Link to="/home" style={{ textDecoration: 'none' }}>
+                            <button className="btn-sig-in" onClick={onClick}>
+                            <span className="img-sig-in">
+                                <img src={Logo} alt="Logo" />
+                            </span>
+                            Sign in with Google</button>
+                        </Link>
+                </div>
+            </Switch>
+        </Router>
     );
 }
 

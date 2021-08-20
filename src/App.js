@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 
+
 const App = () => {
   const [state, setState] = useState("login");
   
@@ -19,5 +20,7 @@ const App = () => {
     )
   }
   return <></>;
-};
+}
+
+
 export default App;
