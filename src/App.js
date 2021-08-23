@@ -5,21 +5,25 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 
 
+
 const App = () => {
   const [state, setState] = useState("login");
-  
-  if (state === "login") {
-    return <Login setState={setState} />;
-  } else if (state === "home") {
-    return(
-      <>
-      <Header setState={setState} />
-      <Home  />;
-      <Footer />
-      </>
-    )
-  }
-  return <></>;
+
+  return (
+  <div className="App">
+    
+    {state === "login" ?
+      (<Login setState={setState} />) : 
+      (
+        <>
+        <Header setState={setState} loginState={state} />
+        <Home setState={setState} loginState={state} />)
+        <Footer />
+        </>
+      )
+    }
+  </div>);
+    
 }
 
 
