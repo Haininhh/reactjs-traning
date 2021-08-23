@@ -1,18 +1,15 @@
 import './Home.css';
-import Logo from '../assets/img/search.png';
+import Logo from '../../assets/png/search.png';
 // import React, { useState } from "react";
 
-const Home = () => {
+export const Home = () => {
     return (
         <div className="content">
             <div className="Container">
                 <img className="bg-container" src={Logo} alt="Logo" />
-                <h1>Sign in with Google</h1>
+                <h1>HOME</h1>
             </div>
         </div>    
     );
 }
     
-
-
-export default Home;

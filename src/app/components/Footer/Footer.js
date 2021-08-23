@@ -1,11 +1,11 @@
 import './Footer.css';
-import facebook from './assets/img/facebook.svg';
-import instagram from './assets/img/instagram.svg';
-import linkedin from './assets/img/linkedin.svg';
-import twitter from './assets/img/twitter.svg';
+import facebook from '../../../assets/svg/facebook.svg';
+import instagram from '../../../assets/svg/instagram.svg';
+import linkedin from '../../../assets/svg/linkedin.svg';
+import twitter from '../../../assets/svg/twitter.svg';
 
 
-function Footer() {
+export const Footer = () => {
     return (
         <footer className="footer">
             <div className="icons">
@@ -21,7 +21,6 @@ function Footer() {
     );
 }
 
-export default Footer;
 
 
 

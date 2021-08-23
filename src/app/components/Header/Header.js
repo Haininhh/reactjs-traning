@@ -1,11 +1,11 @@
-import Logo from '../assets/img/search.png';
-import Google from '../assets/img/Google.png';
+import Logo from '../../../assets/png/search.png';
+import Google from '../../../assets/png/Google.png';
 import './Header.css';
 import { BrowserRouter as  Router, Link, Switch } from 'react-router-dom';
 
 
 
-const Header = (props) => {
+export const Header = (props) => {
     const onClick = () => {
         props.setState('login');
     };
@@ -17,18 +17,16 @@ const Header = (props) => {
                     <Link to="/home">
                         <span className="header-img"><img src={Google} alt="Google" /> </span>
                     </Link>
-                    <Link to="/login" style={{textDecoration: 'none'}}>
+                    {props.loginState === 'home' ? <Link to="/login" style={{textDecoration: 'none'}}>
                         <button className="btn-log-out" onClick={onClick}>
                             <span className="img-log-out">
                                 <img src={Logo} alt="Logo" />
                             </span>
                             Log out with Google</button>
-                    </Link>
+                    </Link> : <></>}
                 </header>
             </Switch>
         </Router>
         
     );
 }
-
-export default Header;
