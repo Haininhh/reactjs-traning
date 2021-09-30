@@ -1,6 +1,7 @@
-import "./Home.css";
 import Logo from "../../assets/img/search.png";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header/Header";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           <h1>Sign in with Google</h1>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
